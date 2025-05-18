@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIReadinessME | Transform Your Relationship with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --obsidian: #111111;
+            --bone: #F9F8F5;
+            --signal: #ACFF4F;
+            --pomegranate: #A8343B;
+            --shadow: #353535;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bone);
+            color: var(--shadow);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        
+        .hero-text {
+            opacity: 0;
+            transform: translateY(15px);
+            animation: fadeInUp 1.2s forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        
+        .btn-primary {
+            background-color: var(--signal);
+            color: var(--obsidian);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(172, 255, 79, 0.3);
+        }
+        
+        .btn-secondary {
+            border: 2px solid var(--pomegranate);
+            color: var(--pomegranate);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--pomegranate);
+            color: white;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--pomegranate);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background-color: var(--signal);
+            transition: width 0.5s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .tribe-card {
+            transition: all 0.3s ease;
+        }
+        
+        .tribe-card:hover {
+            transform: scale(1.02);
+            border-color: var(--pomegranate);
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid var(--signal);
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--signal) }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold" style="color: var(--pomegranate);">AIReadinessME</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#scan" class="nav-link">Readiness Scan</a>
+                <a href="#journey" class="nav-link">7-Day Journey</a>
+                <a href="#tribes" class="nav-link">Micro-Tribes</a>
+                <a href="#tools" class="nav-link">Tool Vault</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20 pb-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 hero-text" style="color: var(--obsidian);">
+                You're not behind. You're just not AI-Ready—yet.
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 hero-text delay-1" style="color: var(--shadow);">
+                Most people feel overwhelmed by AI. Not because they're slow—because no one ever guided them right. Let's start with clarity.
+            </p>
+            <div class="hero-text delay-2">
+                <a href="#scan" class="btn-primary inline-block px-8 py-4 rounded-full text-lg font-semibold">
+                    Take the 3-Minute AI Readiness Scan
+                </a>
+            </div>
+            <div class="mt-16 hero-text delay-3">
+                <p class="italic text-gray-500">"AI is not a tool. It's a mirror."</p>
+                <p class="italic text-gray-500 mt-2">"You're not falling behind. You're waking up."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Readiness Scan Section -->
+    <section id="scan" class="min-h-screen py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-6 text-center" style="color: var(--obsidian);">
+                How ready are you for this shift?
+            </h2>
+            <p class="text-xl text-center mb-12" style="color: var(--shadow);">
+                This isn't a tech quiz. It's a mirror. In 3 minutes, you'll get a reflection of your mindset, clarity, and skills.
+            </p>
+            
+            <div class="bg-gray-50 rounded-xl p-8 shadow-sm">
+                <div class="mb-8">
+                    <div class="flex justify-between mb-2">
+                        <span>Question 1 of 7</span>
+                        <span>14%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="progress-bar rounded-full" style="width: 14%;"></div>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-semibold mb-6">When you think about AI, what emotion comes up first?</h3>
+                
+                <div class="space-y-4">
+                    <button class="w-full text-left p-4 border rounded-lg hover:bg-gray-100 transition">
+                        Excitement - I see possibilities everywhere
+                    </button>
+                    <button class="w-full text-left p-4 border rounded-lg hover:bg-gray-100 transition">
+                        Anxiety - I worry about being left behind
+                    </button>
+                    <button class="w-full text-left p-4 border rounded-lg hover:bg-gray-100 transition">
+                        Curiosity - I want to understand but don't know where to start
+                    </button>
+                    <button class="w-full text-left p-4 border rounded-lg hover:bg-gray-100 transition">
+                        Resistance - I prefer doing things my own way
+                    </button>
+                </div>
+                
+                <div class="mt-8 flex justify-between">
+                    <button class="btn-secondary px-6 py-3 rounded-full font-medium opacity-50 cursor-not-allowed" disabled>
+                        Previous
+                    </button>
+                    <button class="btn-primary px-6 py-3 rounded-full font-medium">
+                        Next Question
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7-Day Journey Section -->
+    <section id="journey" class="min-h-screen py-20 px-6" style="background-color: var(--obsidian); color: var(--bone);">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-6 text-center">
+                Your first 7 days of AI confidence start now.
+            </h2>
+            <p class="text-xl text-center mb-12">
+                Each day, one small action. Each action, one small shift. You'll see yourself differently by the end.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-7 gap-4 mb-12">
+                <div class="bg-white bg-opacity-10 p-4 rounded-lg text-center border border-white border-opacity-20">
+                    <div class="h-10 w-10 mx-auto rounded-full bg-white bg-opacity-20 flex items-center justify-center mb-3">1</div>
+                    <h3 class="font-semibold mb-2">Mindset</h3>
+                    <p class="text-sm opacity-80">5 min reflection</p>
+                </div>
+                <div class="bg-white bg-opacity-5 p-4 rounded-lg text-center border border-white border-opacity-10">
+                    <div class="h-10 w-10 mx-auto rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-3">2</div>
+                    <h3 class="font-semibold mb-2">First Prompt</h3>
+                    <p class="text-sm opacity-60">Locked</p>
+                </div>
+                <div class="bg-white bg-opacity-5 p-4 rounded-lg text-center border border-white border-opacity-10">
+                    <div class="h-10 w-10 mx-auto rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-3">3</div>
+                    <h3 class="font-semibold mb-2">Patterns</h3>
+                    <p class="text-sm opacity-60">Locked</p>
+                </div>
+                <div class="bg-white bg-opacity-5 p-4 rounded-lg text-center border border-white border-opacity-10">
+                    <div class="h-10 w-10 mx-auto rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-3">4</div>
+                    <h3 class="font-semibold mb-2">Tribe</h3>
+                    <p class="text-sm opacity-60">Locked</p>
+                </div>
+                <div class="bg-white bg-opacity-5 p-4 rounded-lg text-center border border-white border-opacity-10">
+                    <div class="h-10 w-10 mx-auto rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-3">5</div>
+                    <h3 class="font-semibold mb-2">Experiment</h3>
+                    <p class="text-sm opacity-60">Locked</p>
+                </div>
+                <div class="bg-white bg-opacity-5 p-4 rounded-lg text-center border border-white border-opacity-10">
+                    <div class="h-10 w-10 mx-auto rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-3">6</div>
+                    <h3 class="font-semibold mb-2">Reflection</h3>
+                    <p class="text-sm opacity-60">Locked</p>
+                </div>
+                <div class="bg-white bg-opacity-5 p-4 rounded-lg text-center border border-white border-opacity-10">
+                    <div class="h-10 w-10 mx-auto rounded-full bg-white bg-opacity-10 flex items-center justify-center mb-3">7</div>
+                    <h3 class="font-semibold mb-2">Integration</h3>
+                    <p class="text-sm opacity-60">Locked</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button class="btn-primary px-8 py-4 rounded-full text-lg font-semibold">
+                    Begin Day 1
+                </button>
+                
+                <div class="mt-12 bg-white bg-opacity-10 p-6 rounded-xl max-w-2xl mx-auto">
+                    <h3 class="text-xl font-semibold mb-3">Today's Task</h3>
+                    <p class="mb-4">Write down 3 fears you have about AI, then reframe each one as a curiosity.</p>
+                    <p class="text-sm opacity-80">Example: "I'm afraid AI will replace my job" → "I'm curious how AI could enhance my unique skills."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Micro-Tribes Section -->
+    <section id="tribes" class="min-h-screen py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-6 text-center" style="color: var(--obsidian);">
+                Don't change alone. Find your circle.
+            </h2>
+            <p class="text-xl text-center mb-12" style="color: var(--shadow);">
+                We move faster together. Join a small group of others who feel what you feel—and are taking action too.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div class="tribe-card p-6 border rounded-xl hover:shadow-md transition">
+                    <h3 class="text-2xl font-semibold mb-3" style="color: var(--pomegranate);">The Skeptical Creative</h3>
+                    <p class="mb-4">You value authenticity and worry AI might dilute your unique voice. You're here to explore without compromising your art.</p>
+                    <div class="flex items-center">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/68.jpg" alt="">
+                        </div>
+                        <span class="ml-2 text-sm">+12 others</span>
+                    </div>
+                    <button class="btn-secondary mt-4 px-4 py-2 rounded-full text-sm font-medium">
+                        Join This Tribe
+                    </button>
+                </div>
+                
+                <div class="tribe-card p-6 border rounded-xl hover:shadow-md transition">
+                    <h3 class="text-2xl font-semibold mb-3" style="color: var(--pomegranate);">The Overwhelmed Professional</h3>
+                    <p class="mb-4">You're juggling responsibilities and feel like you're falling behind. You need practical, manageable steps forward.</p>
+                    <div class="flex items-center">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/75.jpg" alt="">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/90.jpg" alt="">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/22.jpg" alt="">
+                        </div>
+                        <span class="ml-2 text-sm">+18 others</span>
+                    </div>
+                    <button class="btn-secondary mt-4 px-4 py-2 rounded-full text-sm font-medium">
+                        Join This Tribe
+                    </button>
+                </div>
+                
+                <div class="tribe-card p-6 border rounded-xl hover:shadow-md transition">
+                    <h3 class="text-2xl font-semibold mb-3" style="color: var(--pomegranate);">The Dreamer with No Tools</h3>
+                    <p class="mb-4">You have big ideas but don't know where to start technically. You're ready to bridge vision and execution.</p>
+                    <div class="flex items-center">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/33.jpg" alt="">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/56.jpg" alt="">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/45.jpg" alt="">
+                        </div>
+                        <span class="ml-2 text-sm">+9 others</span>
+                    </div>
+                    <button class="btn-secondary mt-4 px-4 py-2 rounded-full text-sm font-medium">
+                        Join This Tribe
+                    </button>
+                </div>
+                
+                <div class="tribe-card p-6 border rounded-xl hover:shadow-md transition">
+                    <h3 class="text-2xl font-semibold mb-3" style="color: var(--pomegranate);">The Quiet Builder</h3>
+                    <p class="mb-4">You've started experimenting but work in isolation. You're looking for thoughtful exchange and deeper implementation.</p>
+                    <div class="flex items-center">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/65.jpg" alt="">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/28.jpg" alt="">
+                            <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/88.jpg" alt="">
+                        </div>
+                        <span class="ml-2 text-sm">+7 others</span>
+                    </div>
+                    <button class="btn-secondary mt-4 px-4 py-2 rounded-full text-sm font-medium">
+                        Join This Tribe
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="mb-6">Not sure which tribe fits you best?</p>
+                <button class="btn-primary px-6 py-3 rounded-full font-medium">
+                    Take Our Matching Quiz
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Vault Section -->
+    <section id="tools" class="min-h-screen py-20 px-6" style="background-color: var(--bone);">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-6 text-center" style="color: var(--obsidian);">
+                Try AI. Safely. With purpose.
+            </h2>
+            <p class="text-xl text-center mb-12" style="color: var(--shadow);">
+                Tools without guidance overwhelm. Here's what works, why it matters, and how to start—today.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="tool-card bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">Idea Expander</h3>
+                        <span class="text-xs px-2 py-1 rounded-full" style="background-color: var(--signal); color: var(--obsidian);">Beginner</span>
+                    </div>
+                    <p class="text-sm mb-4">When you have a seed of an idea but need help growing it in unexpected directions.</p>
+                    <div class="mb-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-xs font-mono mb-1">Sample Prompt:</p>
+                        <p class="text-sm">"Expand on this idea for a children's book about cultural heritage: [your idea here]. Suggest 3 unexpected twists that would make it memorable."</p>
+                    </div>
+                    <button class="btn-primary w-full py-2 rounded-lg text-sm font-medium">
+                        Use This Tool
+                    </button>
+                    <button class="w-full mt-2 py-2 rounded-lg text-sm font-medium border border-gray-200 hover:bg-gray-50 transition">
+                        Save to Your Journey
+                    </button>
+                </div>
+                
+                <div class="tool-card bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">Creative Block Breaker</h3>
+                        <span class="text-xs px-2 py-1 rounded-full" style="background-color: var(--signal); color: var(--obsidian);">Beginner</span>
+                    </div>
+                    <p class="text-sm mb-4">When you're staring at a blank page and need a creative jumpstart.</p>
+                    <div class="mb-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-xs font-mono mb-1">Sample Prompt:</p>
+                        <p class="text-sm">"I'm a [your profession] feeling stuck on [specific challenge]. Give me 5 unconventional approaches inspired by Middle Eastern art forms."</p>
+                    </div>
+                    <button class="btn-primary w-full py-2 rounded-lg text-sm font-medium">
+                        Use This Tool
+                    </button>
+                    <button class="w-full mt-2 py-2 rounded-lg text-sm font-medium border border-gray-200 hover:bg-gray-50 transition">
+                        Save to Your Journey
+                    </button>
+                </div>
+                
+                <div class="tool-card bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold">Cultural Translator</h3>
+                        <span class="text-xs px-2 py-1 rounded-full" style="background-color: #FFD166; color: var(--obsidian);">Intermediate</span>
+                    </div>
+                    <p class="text-sm mb-4">When you need to bridge cultural concepts for global audiences while preserving authenticity.</p>
+                    <div class="mb-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-xs font-mono mb-1">Sample Prompt:</p>
+                        <p class="text-sm">"Explain the concept of [cultural term] from [your culture] in a way that maintains its depth but is accessible to international readers."</p>
+                    </div>
+                    <button class="btn-primary w-full py-2 rounded-lg text-sm font-medium">
+                        Use This Tool
+                    </button>
+                    <button class="w-full mt-2 py-2 rounded-lg text-sm font-medium border border-gray-200 hover:bg-gray-50 transition">
+                        Save to Your Journey
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button class="btn-secondary px-6 py-3 rounded-full font-medium">
+                    Explore All Tools
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="min-h-screen py-20 px-6 relative overflow-hidden" style="background-color: var(--obsidian); color: var(--bone);">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h2 class="text-4xl font-bold mb-6 text-center">
+                I didn't feel ready either.
+            </h2>
+            <p class="text-xl text-center mb-12">
+                This project wasn't born out of confidence. It was born out of fear. I built it for people like me—people like you.
+            </p>
+            
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white opacity-5 to-transparent -rotate-1"></div>
+                <div class="relative bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/3">
+                            <img src="https://randomuser.me
+</html>
